@@ -1,0 +1,45 @@
+  <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h3><%= @user.errors.count %>error prohibited this book from being saved:</h3>
+           <% @user.errors.full_messages.each do |message| %>
+           <ul>
+         <li>
+          <%= message %>
+         </li>
+         </ul>
+         <% end %>
+        </div>
+        <% end %>
+<div class="container ">
+<div class="row">
+<div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+   <h2>User info</h2>
+    <%= form_with model: @user, local: true do |f| %>
+    <div class = "fprm-group">
+      <div class="user-name">Name</div>
+       <%= f.text_field :name %>
+    </div>
+    <div class = "fprm-group">
+    <div class="user-edit-image">Image</div>
+      <%= f.attachment_field :profile_image %>
+    </div>
+    <div class = "fprm-group">
+    <div>Introduction</div>
+      <%= f.text_area :introduction %><br>
+    </div>
+    <div class="row">
+      <%= f.submit "Update User", class:"btn btn-secondary btn-block fas fa-user-cog edit_user" %>
+    </div>
+    <% end %>
+</div>
+</div>
+</div>
+<footer>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="mx-auto">
+        <p>CopyRight Infratop.inc</p>
+      </div>
+    </div>
+  </div>
+</footer>

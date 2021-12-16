@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  book_title: 
+  comment: 
+
+two:
+  book_title: 
+  comment: 
